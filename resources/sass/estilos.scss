@@ -1,0 +1,89 @@
+.cabecera{
+    height: 600px;
+    
+    background-image: url("../../public/img/cabecera.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.selector{
+    border: 1px solid #a34040;
+    border-radius: 5px;
+    padding: 3px 0;
+    
+}
+
+.boton__whatsapp{
+    text-decoration: none;
+    background-color: #e3342f;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    outline: none;
+}
+
+.carrito {
+    width: 15%;
+    position: fixed;
+    top: 3%;
+    left: 0%;
+    z-index: 2;
+    transition: all 500ms;
+    transform: translateX(-180px);
+}
+  
+.mostrarCarrito {
+    transform: translateX(0);
+}
+  
+.valor-carrito {
+    display: block;
+    text-align: center;
+}
+
+
+@media (min-width: 540px) {
+    
+  
+    .carrito {
+      width: 8%;
+      left: 0%;
+    }
+  
+    
+  }
+  
+  @media (min-width: 768px) {
+    
+  
+    .carrito {
+      
+      left: 0.4%;
+    }
+  
+    
+  }
+  
+  @media (min-width: 1024px) {
+    
+  }
+  
+  @media (min-width: 1200px) {
+    .carrito {
+      width: 4%;
+      left: 5%;
+      background-color: #fff;
+      padding: 6px;
+      border-radius: 10px;
+    }
+    .mostrarCarrito {
+        transform: translateX(-25px);
+    }
+    
+    
+  }
