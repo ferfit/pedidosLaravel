@@ -46,6 +46,14 @@
     text-align: center;
 }
 
+.direccion,
+.abono{
+  display: none;
+}
+.mostrar-direccion,
+.mostrar-abono{
+  display: block;
+}
 
 @media (min-width: 540px) {
     

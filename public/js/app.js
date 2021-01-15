@@ -49830,7 +49830,11 @@ var fragment = document.createDocumentFragment();
 var carrito = {}
 /*objeto vacio del carrito donde se guardaran los productos*/
 ;
-var PrecioTotal = ""; //--------------------------------------------------------------------------------------------------------------------------
+var PrecioTotal = "";
+var metodoPago = document.getElementById('metodoDePago');
+var abono = document.getElementById('abono');
+var metodoEnvio = document.getElementById('metodoDeEnvio');
+var direccion = document.getElementById('direccion'); //--------------------------------------------------------------------------------------------------------------------------
 //      eventos
 //--------------------------------------------------------------------------------------------------------------------------
 
@@ -50053,6 +50057,23 @@ whatsapp.addEventListener('click', function () {
 
     var mensaje = "https://api.whatsapp.com/send?phone=5491141774133&text=||----Pedido----|| " + "%0A" + "%0A" + "Nombre: " + nombre + "%0A" + "Método de envio: " + metodoEnvio + "%0A" + "Método de pago: " + metodoPago + "%0A" + "%0A" + "Pedido: " + "%0A" + pedido + "%0A" + "PRECIO TOTAL: $" + PrecioTotal + "&source=&data=";
     window.location.href = mensaje;
+  }
+}); //--------------------------------------------------------------------------------------------------------------------------
+//      Seleccion de metodo de envio y pago
+//--------------------------------------------------------------------------------------------------------------------------
+
+metodoPago.addEventListener('input', function (e) {
+  if (e.target.value == "Efectivo") {
+    abono.classList.add('mostrar-abono');
+  } else {
+    abono.classList.remove('mostrar-abono');
+  }
+});
+metodoEnvio.addEventListener('input', function (e) {
+  if (e.target.value == "Envio a domicilio") {
+    direccion.classList.add('mostrar-direccion');
+  } else {
+    direccion.classList.remove('mostrar-direccion');
   }
 });
 

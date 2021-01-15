@@ -16,6 +16,12 @@ const fragment = document.createDocumentFragment();
 let carrito = {} /*objeto vacio del carrito donde se guardaran los productos*/;
 let PrecioTotal = "";
 
+var metodoPago = document.getElementById('metodoDePago')
+var abono = document.getElementById('abono')
+
+var metodoEnvio = document.getElementById('metodoDeEnvio')
+var direccion = document.getElementById('direccion')
+
 
 
 
@@ -274,4 +280,24 @@ whatsapp.addEventListener('click', ()=>{
   }
 
           
+})
+
+//--------------------------------------------------------------------------------------------------------------------------
+//      Seleccion de metodo de envio y pago
+//--------------------------------------------------------------------------------------------------------------------------
+
+metodoPago.addEventListener('input', (e)=>{
+  if(e.target.value == "Efectivo"){
+    abono.classList.add('mostrar-abono')
+  } else {
+    abono.classList.remove('mostrar-abono')
+  }  
+})
+
+metodoEnvio.addEventListener('input', (e)=>{
+  if(e.target.value == "Envio a domicilio"){
+    direccion.classList.add('mostrar-direccion')
+  } else {
+    direccion.classList.remove('mostrar-direccion')
+  }  
 })

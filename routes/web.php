@@ -20,3 +20,7 @@ Route::get('/', [App\Http\Controllers\InicioController::class, 'index'])->name('
 Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/storage-link', function(){
+	Artisan::call('storage:link');
+});

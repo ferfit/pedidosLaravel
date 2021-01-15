@@ -168,7 +168,7 @@
             <h2 id="ingresaNombre" class="text-center">Método de envio</h2>
             <select class="my-1 opcional shadow selector w-50"  id="metodoDeEnvio" required>
                 <option value="">Elija una opción</option>
-                <option value="Envio a domicilio">Envio a domicilio (+ $100)</option>
+                <option value="Envio a domicilio">Envio a domicilio</option>
                 <option value="Retiro por sucursal">Retiro por sucursal</option>
             </select>
     
@@ -186,14 +186,14 @@
                 <option value="Mercado pago">Mercado pago</option>
             </select>
     
-            <input type="text" class="direccion mb-4 w-50 mt-3 form-control" placeholder="Abono con $..." id="abono">
+            <input type="text" class="abono mb-4 w-50 mt-3 form-control" placeholder="Abono con $..." id="abono">
             
         </div>
     
     
     
         {{-- boton whatsapp --}}
-        <div class="container cont-enviar d-flex justify-content-center align-items-center">
+        <div class="container cont-enviar d-flex justify-content-center align-items-center mt-3">
             
             <button class="boton__whatsapp text-center shadow rounded-pill">Enviar</button> 
         </div>
